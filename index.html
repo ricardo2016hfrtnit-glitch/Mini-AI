@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini AI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .card {
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 4px 20px #0001;
+    }
+    h1 { color: #2563eb; }
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      padding: 12px 22px;
+      background: #2563eb;
+      color: white;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #reply { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Mini AI</h1>
+    <p>Your little AI assistant</p>
+    <input id="question" placeholder="Ask Mini AI something...">
+    <button onclick="askMiniAI()">Send</button>
+    <p id="reply">Hello! Welcome to Mini AI.</p>
+  </div>
+
+  <script>
+    function askMiniAI() {
+      const question = document.getElementById("question").value.trim();
+      const reply = document.getElementById("reply");
+
+      if (!question) {
+        reply.textContent = "Please type a question first!";
+        return;
+      }
+
+      reply.textContent =
+        "Hi! Mini AI's brain isn't connected to this website yet. " +
+        "Your question was: " + question;
+    }
+  </script>
+</body>
+</html>
